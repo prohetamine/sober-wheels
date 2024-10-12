@@ -293,7 +293,8 @@ const App = () => {
       cars: (isCars ? carsCount : 1),
       price: (isCars ? carsCount : 1) * 70,
       hours: isCallNow ? 'now' : `After ${callHours} hours`,
-      phone: phone
+      phone: phone,
+      comment: comment
     }
 
     axios.post('/data', data)

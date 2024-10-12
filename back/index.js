@@ -16,22 +16,24 @@ app.use('/', express.static(join(__dirname, '../front/build')))
 app.post('/data', async (req, res) => {
   res.end('ok')
 
-  if (req.body.phone.length === 0) {
-    return
-  }
-
-  const data = `phone: ${req.body.phone}\nprice:${req.body.price}$\ncars: ${req.body.cars}\nhours: ${req.body.hours}`
-
-  console.log(data)
-
   try {
-    await bot.telegram.sendMessage(6629926445, data)
-  } catch (e) {}
-
-  await sleep(2000)
-
-  try {
-    await bot.telegram.sendMessage(439234155, data)
+    if (req.body.phone.length === 0) {
+      return
+    }
+  
+    const data = `phone: ${req.body.phone}\nprice:${req.body.price}$\ncars: ${req.body.cars}\nhours: ${req.body.hours}\ncomment: ${req.body.comment}`
+  
+    console.log(data)
+  
+    try {
+      await bot.telegram.sendMessage(6629926445, data)
+    } catch (e) {}
+  
+    await sleep(2000)
+  
+    try {
+      await bot.telegram.sendMessage(439234155, data)
+    } catch (e) {}
   } catch (e) {}
 })
 
