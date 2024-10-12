@@ -21,7 +21,7 @@ app.post('/data', async (req, res) => {
       return
     }
   
-    const data = `phone: ${req.body.phone}\nprice:${req.body.price}$\ncars: ${req.body.cars}\nhours: ${req.body.hours}\ncomment: ${req.body.comment}`
+    const data = `phone: ${req.body.phone}\nprice: ${req.body.price}$\ncars: ${req.body.cars}\nhours: ${req.body.hours}\ncomment: ${req.body.comment}`
   
     console.log(data)
   
