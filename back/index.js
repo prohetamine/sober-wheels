@@ -16,6 +16,10 @@ app.use('/', express.static(join(__dirname, '../front/build')))
 app.post('/data', async (req, res) => {
   res.end('ok')
 
+  if (req.body.phone.length === 0) {
+    return
+  }
+
   const data = `phone: ${req.body.phone}\nprice:${req.body.price}$\ncars: ${req.body.cars}\nhours: ${req.body.hours}`
 
   console.log(data)

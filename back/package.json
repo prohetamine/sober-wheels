@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "dev": "node index.js",
+    "start": "pm2 start index.js",
+    "stop": "pm2 stop index.js",
+    "restart": "yarn stop && yarn start"
+  },
   "type": "module",
   "dependencies": {
     "express": "^4.21.1",
