@@ -348,7 +348,7 @@ const App = () => {
                       <FakeInputOverflow>
                         <TextIcon>{carsCount} car</TextIcon>
                       </FakeInputOverflow>
-                      <SmallButtonOverflow onClick={() => setCarsCount(s => s >= 3 ? 3 : s+1)}>
+                      <SmallButtonOverflow onClick={() => setCarsCount(s => s >= 4 ? 4 : s+1)}>
                         <Icon src={plus} />
                       </SmallButtonOverflow>
                       <SmallButtonOverflow onClick={() => setCarsCount(s => s <= 1 ? 1 : s-1)}>
