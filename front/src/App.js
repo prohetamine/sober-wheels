@@ -404,7 +404,7 @@ const App = () => {
               <BottomContentOverflow>
               <BottomContainerOverflow>
                 <TextPrice>Items: <b>{(isCars ? carsCount : 1)} cars</b> x <b>70$</b></TextPrice>
-                <TextPrice>Count: <b>{(isCars ? carsCount : 1) * 70}$~</b></TextPrice>
+                <TextPrice>Count: <b>~{(isCars ? carsCount : 1) * 70}$</b></TextPrice>
               </BottomContainerOverflow>
               </BottomContentOverflow>
             </RowBottoomOverflow>
